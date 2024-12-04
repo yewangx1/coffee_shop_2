@@ -1,0 +1,232 @@
+:root {
+    --black: #311F09;
+    --orange: #FF8A00;
+    --green: #714a25;
+    --white-orange: #FFE6C9;
+    --gray: #b0b0b0; /* Добавил серый цвет */
+}
+
+body, html {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1237px;
+    margin: 0px auto;
+}
+
+/* Header */
+header {
+    margin-top: 51px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content__last {
+    align-items: center;
+    display: flex;
+}
+
+.header-content__last img {
+    margin-right: 25px;
+}
+
+.header-content__last a:last-of-type {
+    background-color: var(--green);
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 34px;
+    border-radius: 133px;
+    transition: background-color .4s ease;
+}
+
+.header-content__last a:last-of-type:hover {
+    background-color: var(--orange);
+}
+
+nav a {
+    text-decoration: none;
+    margin-right: 45px;
+    color: var(--black);
+    display: inline-block;
+    transition: all .4s ease;
+}
+
+nav a:hover {
+    color: var(--green);
+    transform: scale(1.05);
+}
+
+nav a:last-of-type {
+    margin-right: 0;
+}
+
+nav a.checked {
+    color: var(--orange);
+}
+
+/* Main */
+main {
+    margin-top: 166px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content_about {
+    color: var(--orange);
+    background-color: var(--white-orange);
+    padding: 10px 34px;
+    border-radius: 126px;
+    display: inline-block;
+    margin-bottom: 22px;
+}
+
+.main-content h1 {
+    color: var(--black);
+    font-size: 80px;
+    font-family: "Raleway", sans-serif;
+    line-height: 110%;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.main-content p {
+    line-height: 200%;
+    margin-bottom: 77px;
+    color: var(--black);
+}
+
+.main-content__buttons a:last-of-type {
+    padding: 17px 55px;
+    background-color: var(--green);
+    border-radius: 162px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 23px;
+    transition: transform .4s ease;
+    display: inline-block;
+}
+
+.main-content__buttons a:hover {
+    transform: scale(1.05);
+}
+
+/* Menu */
+.menu {
+    padding-top: 164px;
+    padding-bottom: 231px;
+}
+
+.menu h2 {
+    font-family: "Tinos", serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 200%;
+    color: var(--black);
+    margin-bottom: 60px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu-items {
+    width: 100%;
+    background-color: #e8e0d6;
+    border-radius: 70px;
+    text-align: center;
+    padding: 35px;
+    margin-bottom: 35px;
+}
+
+.contacts-text {
+    width: 100%;
+    background-color: #e8e0d6;
+    border-radius: 70px;
+    text-align: center;
+    padding: 35px;
+    margin-top: 30px;
+    margin-bottom: 130px;
+}
+
+/* Invalid field */
+input:invalid {
+    border-color: red;
+    color: rgb(0, 0, 0);
+    box-shadow: none;
+}
+
+/* Hidden */
+.hidden {
+    display: none;
+}
+
+/* Login form */
+.login-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--white-orange);
+    border: 2px solid var(--green);
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h3 {
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group small {
+    display: block;
+    font-size: 12px;
+    color: var(--gray);
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: var(--green);
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="button"] {
+    background: var(--red);
+}

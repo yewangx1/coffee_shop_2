@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Кофейня</title>
+</head>
+<body>
+    
+<!-- HEADER -->
+<header>
+    <div class="container">
+        <div class="header-content">
+            <img class="header-content__logo" src="assets/images/logo.png" alt="">
+            <nav>
+                <a href="#home">Главная</a>
+                <a href="#menu">Меню</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+            <div class="header-content__last">
+                <a href="#">
+                    <img src="assets/images/cart.png" alt="">
+                </a>
+                <a href="#" id="login-btn">Log in</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- MAIN -->
+<main id="home">
+    <div class="container">
+        <div class="main-content">
+            <div>
+                <div class="main-content_about">Кофе сейчас</div>
+                <h1>Уютная<br> Кофейня</h1>
+                <p>Кофейня — это место, где аромат свежезаваренного кофе наполняет воздух, создавая атмосферу уюта и тепла. Здесь можно не только насладиться любимым напитком, но и провести время с друзьями или погрузиться в чтение книги, наслаждаясь атмосферой творчества и вдохновения.</p>
+                <div class="main-content__buttons">
+                    <a href="#">Заказать сейчас</a>
+                </div>
+            </div>
+            <div>
+                <img src="assets/images/main_bg.png" alt="">
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- MENU -->
+<section id="menu" class="menu">
+    <div class="container">
+        <h2>Меню</h2>
+        <div class="menu-items">
+            <img src="assets/images/menu/esp.png" alt="">
+            <h3>Эспрессо</h3>
+            <div class="menu-item__raiting">
+                <img src="assets/images/menu/star-orange.svg" alt="">
+                <img src="assets/images/menu/star-orange.svg" alt="">
+                <img src="assets/images/menu/star-orange.svg" alt="">
+                <img src="assets/images/menu/star-orange.svg" alt="">
+                <img src="assets/images/menu/star-empty.svg" alt="">
+            </div>
+            <p>Эспрессо - это основа всех кофейных напитков, малого объема, с сбалансированным вкусом и тонкими нотками вишни, лимона и темного шоколада. Превосходно подойдёт для моментального пробуждения.</p>
+        </div>
+        <div class="menu-items">
+            <img src="assets/images/menu/kap.png" alt="">
+            <h3>Капучино</h3>
+            <div class="menu-item__raiting">
+                <img src="assets/images/menu/star-orange.svg" alt="">
+                <img src="assets/images/menu/star-orange.svg" alt="">
+                <img src="assets/images/menu/star-orange.svg" alt="">
+                <img src="assets/images/menu/star-orange.svg" alt="">
+                <img src="assets/images/menu/star-orange.svg" alt="">
+            </div>
+            <p>Идеально сбалансированный кофейный напиток, для тех кто ценит классику и постоянство. Готовится на двух эспрессо с долей молока 80%</p>
+        </div>
+        <div class="menu-items">
+            <img src="assets/images/menu/mok.png" alt="">
+            <h3>Мокко</h3>
+            <div class="menu-item__raiting">
+                <img src="assets/images/menu/star-orange.svg" alt="">
+                <img src="assets/images/menu/star-orange.svg" alt="">
+                <img src="assets/images/menu/star-orange.svg" alt="">
+                <img src="assets/images/menu/star-orange.svg" alt="">
+                <img src="assets/images/menu/star-empty.svg" alt="">
+            </div>
+            <p>Мокко, также известное как моккачино, представляет собой популярный кофейный напиток, который сочетает в себе кофе, молоко и шоколад.</p>
+        </div>    
+    </div>
+</section>
+
+<!-- CONTACTS -->
+<section id="contacts" class="contacts">
+    <div class="container">
+        <div class="contacts-text">
+            <p>Свяжитесь с нами: korbich_es@edu.surgu.ru</p>
+            <p>Выполнил студент СурГу 609-41 Корбич Екатерина</p>
+        </div>
+    </div>
+</section>
+
+<!-- Login Form -->
+<div id="login-form" class="login-form hidden">
+    <form action="#" onsubmit="return validateForm()">
+        <h3>Вход в аккаунт</h3>
+        <div class="form-group">
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" name="email" placeholder="Введите ваш email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+            <small>Введите корректный email (например, example@domain.com)</small>
+        </div>
+        <div class="form-group">
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" placeholder="Введите ваш пароль" required pattern=".{6,}">
+            <small>Пароль должен содержать минимум 6 символов</small>
+        </div>
+        <div class="form-group checkbox-group">
+            <label for="remember">
+                <input type="checkbox" id="remember" name="remember">
+                Запомнить меня
+            </label>
+        </div>        
+        <button type="submit">Войти</button>
+        <button type="button">Отмена</button>
+    </form>
+</div>
+</body>
+</html>
